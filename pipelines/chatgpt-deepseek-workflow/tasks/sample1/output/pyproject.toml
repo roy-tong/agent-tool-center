@@ -1,0 +1,15 @@
+[project]
+name = "file-ext-stats"
+version = "0.1.0"
+description = "统计目录下各文件扩展名的文件数量与总大小（字节）的 CLI 工具"
+requires-python = ">=3.10"
+
+[project.scripts]
+extstats = "extstats.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["extstats*"]

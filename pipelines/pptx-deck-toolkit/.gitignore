@@ -1,0 +1,10 @@
+# 本地虚拟环境（唯一依赖 python-pptx）
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+
+# 审计输出
+issues.json

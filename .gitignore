@@ -1,0 +1,16 @@
+# 第三方 skill（不在本仓库分发）
+skills/khazix-writer/
+skills/impeccable/
+skills/shuorenhua/
+# 已有独立仓库的资产（本地挂载用，发布走各自仓库）
+skills/deck-humanizer/
+skills/bilibili-transcript
+skills/iread
+skills/user-demand-research
+pipelines/bilibili-transcript-pipeline/
+pipelines/deck-scaffold/
+# 运行时产物
+.venv/
+__pycache__/
+.DS_Store
+node_modules/
