@@ -7,7 +7,7 @@
 ## 通用底线（三去）
 
 - **去机翻**：长定语链拆短、被动改主动、名词化还原动词，清洗翻译腔
-- **去 AI 味**：禁词（说白了/这意味着/赋能/抓手……）、禁结构（二元对比骨架、金句收尾、对仗空转）、防改过头的最小修改哲学
+- **去 AI 味**：清理空话、机械对比、同构段落与重复结论；有真实信息的对比和原稿有效节奏保留
 - **去自造词**：术语判断三问——标准是「目标读者认不认」，不是「字面好不好懂」
 
 ## 三模式
@@ -16,9 +16,9 @@
 | --- | --- | --- |
 | 报告 | 全面完整、叙述简单清晰；结构正当，模板腔不是 | [references/report.md](references/report.md) |
 | deck | 每页信息密度高、结合图表、符合演示场景；扫 5 秒讲 30 秒 | [references/deck.md](references/deck.md) |
-| 自媒体 | tong 风格：一线动手者视角 + 审计纪律 + 干燥冷幽默 | [references/social.md](references/social.md) |
+| 自媒体 | 有独立判断、故事感、幽默和活人感；事实与经历仍需真实 | [references/social.md](references/social.md) |
 
-自媒体模式是本 skill 的核心差异点：不从「像哪个博主」出发，而是从自己的成稿样本提炼签名特征（结论先行、数字挂来源、自曝错误、否定性证据的防御性写法、方法论外化、利益博弈解剖），再把卡兹克、葬AI、半佛仙人、歸藏、宝玉五家的技法作为配料表融入。风格红线沿用 2026-08-31 全站文章审计：结论先行、每个数字挂来源、控制「不是A而是B」句式、控制加粗密度、结尾不回环。
+当前没有经过用户确认的亲笔文风样本。[已确认偏好与校准方法](references/voice-calibration.md)把王小波式独立思考、故事与幽默，以及半佛仙人、葬AI带来的“活人感”放在中心。其他科技作者的[可迁移技法](references/creator-techniques.md)按选题调用。用户对具体成稿的反馈优先于这份初版画像。
 
 ## 安装
 
@@ -36,7 +36,9 @@ my-voice/
 └── references/
     ├── report.md         # 报告模式细则
     ├── deck.md           # deck 模式细则（含图表选型）
-    └── social.md         # 自媒体模式（tong 风格 + 五家技法配料表）
+    ├── social.md         # 自媒体写作与平台变形
+    ├── voice-calibration.md # 已确认偏好、未知项与校准方式
+    └── creator-techniques.md # 参考作者的技法与适用条件
 ```
 
 ## 致谢
@@ -45,7 +47,7 @@ my-voice/
 
 - [khazix-skills](https://github.com/KKKKhazix/khazix-skills)（数字生命卡兹克的公众号写作 skill）
 - [shuorenhua](https://github.com/MrGeDiao/shuorenhua)（中文优先的去 AI 味改写 skill）
-- [葬AI](https://funeralai.cc/articles)、[半佛仙人文风拆解](https://blog.ax0x.ai/stealing-styles-zh)、[歸藏](https://www.guizang.ai)、[宝玉的分享](https://baoyu.io)
+- [葬AI](https://funeralai.cc/articles)、[半佛仙人授权文章](https://www.woshipm.com/ai/6351355.html)、[歸藏](https://www.guizang.ai)、[宝玉的分享](https://baoyu.io)、[Simon Willison](https://simonwillison.net/)
 
 ## License
 
