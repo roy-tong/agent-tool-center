@@ -8,7 +8,7 @@
 
 ```
 ├── skills/        第一方 skill（canonical 唯一源）
-│   ├── my-voice                   # 默认表达 skill：报告/deck/自媒体三模式 + 三去底线
+│   ├── my-voice                   # 默认表达 skill：报告/普通 deck/融资 BP/公开写作 + 三去底线
 │   ├── warm-email-outreach        # 邮件外联（千人千面/防AI识别/先拉近距离再谈正事）
 │   ├── expert-review-outreach     # 求评式外联（Raju 模式）
 │   └── b2b-account-mapping        # B2B 触达前的目标解析与换人协议

@@ -2,7 +2,7 @@
 
 个人默认表达优化 skill，用于 Claude Code / ZCode 等 agent（兼容 [Agent Skills](https://code.claude.com/docs/en/skills) 规范：目录 + SKILL.md + 按需加载的 references）。
 
-管三类常输出物的从零写作与常规改写，所有文字共享一条通用底线。
+管报告、普通 deck、融资 BP 和公开写作的从零创作与常规改写，所有文字共享一条通用底线。
 
 ## 通用底线（三去）
 
@@ -10,12 +10,13 @@
 - **去 AI 味**：清理空话、机械对比、同构段落与重复结论；有真实信息的对比和原稿有效节奏保留
 - **去自造词**：术语判断三问——标准是「目标读者认不认」，不是「字面好不好懂」
 
-## 三模式
+## 场景
 
 | 模式 | 要求 | 细则 |
 | --- | --- | --- |
 | 报告 | 全面完整、叙述简单清晰；结构正当，模板腔不是 | [references/report.md](references/report.md) |
 | deck | 每页信息密度高、结合图表、符合演示场景；扫 5 秒讲 30 秒 | [references/deck.md](references/deck.md) |
+| 融资 BP / VC pitch | 用市场证据和创始人执行力回答投资人的核心疑问；数字、履历与未知项经得起追问 | [references/deck.md](references/deck.md) + [references/bp-deck.md](references/bp-deck.md) |
 | 自媒体 | 有独立判断、故事感、幽默和活人感；事实与经历仍需真实 | [references/social.md](references/social.md) |
 
 当前没有经过用户确认的亲笔文风样本。[已确认偏好与校准方法](references/voice-calibration.md)把王小波式独立思考、故事与幽默，以及半佛仙人、葬AI带来的“活人感”放在中心。其他科技作者的[可迁移技法](references/creator-techniques.md)按选题调用。用户对具体成稿的反馈优先于这份初版画像。
@@ -36,6 +37,7 @@ my-voice/
 └── references/
     ├── report.md         # 报告模式细则
     ├── deck.md           # deck 模式细则（含图表选型）
+    ├── bp-deck.md        # 投资人融资 BP：市场、团队、证据、口径
     ├── social.md         # 自媒体写作与平台变形
     ├── voice-calibration.md # 已确认偏好、未知项与校准方式
     └── creator-techniques.md # 参考作者的技法与适用条件
