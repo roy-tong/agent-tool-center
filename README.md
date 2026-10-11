@@ -22,9 +22,11 @@
         #          deck-scaffold（Vite 系 HTML deck 脚手架）
 ```
 
-**外部产品仓库**：[bilibili-transcript-pipeline](https://github.com/roy-tong/bilibili-transcript-pipeline) · [deck-scaffold](https://github.com/roy-tong/deck-scaffold) · [deck-humanizer](https://github.com/roy-tong/deck-humanizer) · [user-demand-research (SURE)](https://github.com/roy-tong/user-demand-research) · [iRead](https://github.com/roy-tong/iRead) · [x-ops-automation](https://github.com/roy-tong/x-ops-automation)
+**外部产品仓库**：[bilibili-transcript-pipeline](https://github.com/roy-tong/bilibili-transcript-pipeline) · [deck-scaffold](https://github.com/roy-tong/deck-scaffold) · [deck-humanizer](https://github.com/roy-tong/deck-humanizer) · [user-demand-research (SURE)](https://github.com/roy-tong/user-demand-research) · [iRead](https://github.com/roy-tong/iRead) · [research-to-publish](https://github.com/roy-tong/research-to-publish) · [marketing-ops-automation](https://github.com/roy-tong/marketing-ops-automation)
 
-## 三条产品线
+（已归档留档：[x-ops-automation](https://github.com/roy-tong/x-ops-automation) 已并入 marketing-ops-automation；[my-voice 独立仓](https://github.com/roy-tong/my-voice) 已并入本中心 skills/my-voice）
+
+## 四条产品线
 
 ### 1. 研究线 —— 三个产品，一份契约
 
@@ -46,9 +48,16 @@
 - **deck-humanizer**（skill）：deck/PPT/BP 文案去 AI 味去机翻味
 - **report-html**：项目文档 → 单文件 HTML（工作区"一个项目一个 HTML"约定的标准生成器）
 
-### 3. 运营线
+### 3. 内容线（研究 → 文章 → 多平台交付）
 
-- **x-ops-automation**（projects/AgentMeasure/代码仓库/，[roy-tong/x-ops-automation](https://github.com/roy-tong/x-ops-automation)）：X 运营（CDP 接管真实 Chrome）
+- **research-to-publish**（[roy-tong/research-to-publish](https://github.com/roy-tong/research-to-publish)）：内容生产管线。本地研究 / GitHub 固定提交 / ChatGPT 会话 → 有来源有版本的网站文章 + 公众号 / 小红书交付包（审核门禁 + 发布回执；零依赖 CLI + skill）
+- 发布出口：[roy-tong.github.io](https://github.com/roy-tong/roy-tong.github.io)（博客 + llms.txt 只读 agent 索引）
+
+接线：研究线产出（SURE 证据分级报告、iRead 周报）作为 research-to-publish 的来源快照输入 → 三平台交付包 → 发布回执回流修订。
+
+### 4. 运营线
+
+- **marketing-ops-automation**（[roy-tong/marketing-ops-automation](https://github.com/roy-tong/marketing-ops-automation)）：多渠道运营执行内核（X / Email / Reddit / LinkedIn / GitHub；统一六原语 + 写路径事务管道 + 账本；CLI / MCP / Skill 三形态。X 渠道 vendor 自已归档的 x-ops-automation）
 - **warm-email-outreach / expert-review-outreach**（skill）：邮件外联
 
 ## 各端接入方式
