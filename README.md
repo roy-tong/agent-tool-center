@@ -19,17 +19,20 @@
 
 ### 1. 研究线 —— SURE 为核心
 
-日常研究主力是 **SURE**（爬数据、做分析、出研究最常用）；媒体转写作证据输入。iRead 已移出研究线，降级为终端应用的可选信源监测输入（全量跑批资源占用大、链路慢、成本高，按需低频启用）。
+日常研究主力是 **SURE**（爬数据、做分析、出研究最常用）；媒体转写作证据输入；开源/闭源项目研究提供标的库与方法论。iRead 已移出研究线，降级为终端应用的可选信源监测输入（全量跑批资源占用大、链路慢、成本高，按需低频启用）。
 
 | 产品 | 模式 | 输入 → 输出 |
 |---|---|---|
 | **SURE / user-demand-research**（核心，projects/用户需求研究，[roy-tong/user-demand-research](https://github.com/roy-tong/user-demand-research)） | 项目制深度研究 | 研究问题 → 采集→清洗→打标→信号→审计 → 证据分级报告 + BRD/MRD/PRD 整合层 |
 | **bilibili-transcript-pipeline**（本中心 pipelines/ 挂载） | 媒体证据转写 | B站视频/本地音视频 → transcript.md（时间戳逐字稿） |
+| **开源项目研究对象库**（projects/待归类/开源项目库，本地资产） | GitHub 开源/闭源标的研究 | 五层框架（L0 雷达→L1 初筛→L2 实质核查→L3 机会映射→L4 记分卡）→ 125 条案例宽表（开源 105 + 闭源经营者 20，95% 数据直采标注）+ 方法论全景报告 |
 
 接线契约：
 - **bilibili → SURE**：本地访谈录音走 `transcribe` 产出逐字稿，按 SURE `templates/interview-kit/runbook.md` 消化为纪要，`source_family: interview` 入 evidence.jsonl（已接线）。
 - **SURE → report-html**：`06-report` 的 md 用 `pipelines/report-html` 合并成单文件 HTML 交付（`build_report_html.py -i <报告目录> -o <项目名>-总览.html`）。
 - **SURE → research-to-publish**：证据分级报告作为终端应用的来源快照导入（`ingest case`），进入内容生产。
+- **项目库 → 内容线**：案例的「为什么值得研究 / 机会与内容角度」字段直接成为内容选题素材（开源热度主线的底座）；库可增量更新（`数据/` 加 JSON 后跑 `生成宽表.py`）。
+- **项目库方法论 → 经营自己**：方法论蒸馏为 github-project-ops skill（见第 4 节），经营自有仓库走 `mkt github audit|inbox|reply` 执行段。
 
 ### 2. 终端应用 —— 内容×运营全链路
 
@@ -46,7 +49,10 @@
 - **pptx-deck-toolkit**：python-pptx 直排（内容契约 + 几何审计器，python-pptx直排谱系 deck 的工程化）
 - **deck-humanizer**（skill）：deck/PPT/BP 文案去 AI 味去机翻味
 - **report-html**：项目文档 → 单文件 HTML（工作区"一个项目一个 HTML"约定的标准生成器）
-- **my-voice（审稿 gate）**：所有对外输出（报告、deck、融资 BP、文章）在 review / 交付前过 my-voice 表达质量底线（去机翻 / 去AI味 / 去自造词）；终端应用的生产流程已内嵌该步骤（r2p README 真实生产段）
+- **审稿 gate（两道，所有对外输出必过）**：
+  1. **my-voice 表达底线**：去机翻 / 去AI味 / 去自造词（skill 见第 4 节，唯一源本中心 skills/my-voice）；
+  2. **对标质量审核**（文章类）：改稿前先读对标博主语料找语感 → 六病因诊断 + 七条改法（选词造句层）→ 深度配方（六层厚度，3000–5000 字结构）→ 对标画像阈值质检（我/千字、保险词/千字、套话归零；脚本实测校准）。对标语料、诊断规则与质检脚本资产在本地 `内容管线工作台/对标语料-20261011/`。
+  顺序：build 后先过 my-voice，再过对标审核，然后人 review（终端应用生产流程已内嵌，见 r2p README 真实生产段）；事实与数字两道 gate 都不动。
 
 ### 4. 组件与小工具清单
 
@@ -71,6 +77,8 @@
 
 挂载副本（产品仓库为上游，本中心只做挂载，更新走仓库发版后重新挂载）：
 `skills/`: bilibili-transcript、deck-humanizer、iread、user-demand-research · `pipelines/`: bilibili-transcript-pipeline、deck-scaffold
+
+跨仓 skill（正本不在此，备忘）：github-project-ops（开源/闭源项目经营方法论，正本 `~/.agents/skills/github-project-ops/`，发行副本在 marketing-ops-automation 仓库 `skills/`，改正本后需同步）
 
 第三方 skill（不在本仓库分发）：khazix-writer、impeccable、shuorenhua（上游 MrGeDiao）
 
