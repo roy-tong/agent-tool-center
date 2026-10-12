@@ -25,7 +25,7 @@
 |---|---|---|
 | **SURE / user-demand-research**（核心，projects/用户需求研究，[roy-tong/user-demand-research](https://github.com/roy-tong/user-demand-research)） | 项目制深度研究 | 研究问题 → 采集→清洗→打标→信号→审计 → 证据分级报告 + BRD/MRD/PRD 整合层 |
 | **bilibili-transcript-pipeline**（本中心 pipelines/ 挂载） | 媒体证据转写 | B站视频/本地音视频 → transcript.md（时间戳逐字稿） |
-| **开源项目研究对象库**（projects/待归类/开源项目库，本地资产） | GitHub 开源/闭源标的研究 | 五层框架（L0 雷达→L1 初筛→L2 实质核查→L3 机会映射→L4 记分卡）→ 125 条案例宽表（开源 105 + 闭源经营者 20，95% 数据直采标注）+ 方法论全景报告 |
+| **开源项目研究对象库**（projects/开源项目库，本地资产） | GitHub 开源/闭源标的研究 | 五层框架（L0 雷达→L1 初筛→L2 实质核查→L3 机会映射→L4 记分卡）→ 125 条案例宽表（开源 105 + 闭源经营者 20，95% 数据直采标注）+ 方法论全景报告 |
 
 接线契约：
 - **bilibili → SURE**：本地访谈录音走 `transcribe` 产出逐字稿，按 SURE `templates/interview-kit/runbook.md` 消化为纪要，`source_family: interview` 入 evidence.jsonl（已接线）。
