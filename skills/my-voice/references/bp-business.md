@@ -1,6 +1,6 @@
 # 业务型 BP 方法：证据、定位与多版式
 
-适用：业务型 BP、产品族方案、需要用真实数据证明价值的多产品 deck、需要原生可编辑 PPTX 的管理层汇报。页面文案与图表规则继承 [deck.md](deck.md)；面向投资人的融资 BP 另读 [bp-deck.md](bp-deck.md)。本文件处理「内容为什么成立、价值怎样被证明、版式怎样服务内容」。
+适用：业务型 BP、产品族方案、需要用真实数据证明价值的多产品 deck、需要原生可编辑 PPTX 的管理层汇报。页级内容合同、图表与生产核验继承 [deck.md](deck.md)，中英文表达继承 [business-language.md](business-language.md)；面向投资人的融资 BP 另读 [bp-deck.md](bp-deck.md)。本文件处理「内容为什么成立、价值怎样被证明、版式怎样服务内容」。
 
 方法提炼自 2026-11-17 经用户认可的 OVO 产品族 BP v7；该项目的完整复盘与专有事实归档于 ovo family 项目内，不在本 skill 重复维护。
 
@@ -126,7 +126,7 @@ so-what 写成业务取舍的改变（「数据让先造硬件改成先验证软
 - 深色封面/收束 + 浅色正文；强调色控制在 2–4 个。
 - 一页一个主张；图题写结论，来源贴近图，数据标签直接标。
 - 卡片高度跟着内容走，文字框必须落在卡片内。留白是组织关系，不是剩余空间。
-- 一页一图为主；图旁文字解释 so-what，不重复抄图中数字。
+- 一页一个主图；辅助模块必须证明同一主张，图旁文字解释 so-what，不重复抄图中数字。
 - 原生图表可编辑，不能把截图当「可编辑 PPT」。
 
 ## 生产流程：一个内容源，多种交付物
@@ -148,7 +148,7 @@ so-what 写成业务取舍的改变（「数据让先造硬件改成先验证软
 4. **页型由构建函数决定。** 同是表格类不应意味着全稿同一布局；按页面问题选 cards / pipeline / evidence / rules / matrix / timeline。
 5. **过程文件留在内部。** 管理层拿 PPTX、PDF、讲稿；构建脚本、审计和截图默认不作为外发附件。
 
-版面骨架、图表配方与几何审计的具体实现用 `deck-design` skill（`assets/deck_base.py`、渲染与审计流程）；PPTX 的读取抽取、转 PDF 与逐页 PNG 预览用官方 `presentations:pptx` 插件。本文只约定流程与口径。
+设计决策、主题/模板和组件契约用 `deck-design`；新代码型 Deck 默认 Slidev，GUI/可编辑交付优先 Presenton，存量或高度定制原生图表才沿用 `deck-design` 的 python-pptx 路径。环境里存在 `pptx-deck-toolkit` 时，用 `deck_contract.py` 做内容校验、`audit_deck.py` 做实际 PPTX 的 C1–C10 几何审计，再把成品渲染为 PNG 目检。`deck-scaffold` 只维护存量，不用于新项目。完整工具路由、导出边界与验收顺序以 [deck-production.md](deck-production.md) 为正本；事实与视觉冲突见 [deck.md](deck.md)。
 
 ## 交付门禁：四条线
 

@@ -45,7 +45,7 @@
 
 ### 3. 材料线 —— 交付物生产 + 审稿 gate
 
-- **deck-scaffold**：HTML deck 工程脚手架（新 deck 从 `create-deck.sh` 初始化，禁止整目录复制旧项目）
+- **deck-scaffold**：仅维护存量 HTML deck 工程，不用于新 deck；新代码型 deck 默认 Slidev，GUI/可编辑交付优先 Presenton，统一生成路由见 `skills/my-voice/references/deck-production.md`
 - **pptx-deck-toolkit**：python-pptx 直排（内容契约 + 几何审计器，python-pptx直排谱系 deck 的工程化）
 - **deck-humanizer**（skill）：deck/PPT/BP 文案去 AI 味去机翻味
 - **report-html**：项目文档 → 单文件 HTML（工作区"一个项目一个 HTML"约定的标准生成器）
